@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClinicAccessDialog</class>
+ <widget class="QDialog" name="ClinicAccessDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>School Accessibility Analysis</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="text">
+      <string>School Accessibility Analysis</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 16px; font-weight: bold;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelDistrict">
+       <property name="text">
+        <string>Select District:</string>
+       </property>
+      </widget>
+     </item>
+
+     <!-- <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+      
+          <widget class="QComboBox" name="districtComboBox">
+          <property>
+          <rect>
+          <x>330</x>
+          <y>20</y>
+          <width>60</width>
+          <height>22</height>
+          </rect>
+          </property>
+            <property name="toolTip">
+              <string>Select a district for analysis</string>
+            </property>
+            <item>
+            <property name="text">
+            <string>
+                   item 1
+            </string>
+            </property>
+            </item>
+             <item>
+            <property name="text">
+            <string>
+                   item 2
+            </string>
+            </property>
+            </item>
+          </widget>
+        
+      </layout>
+    </item> -->
+      
+     <item row="0" column="1">
+      <widget class="QComboBox" name="districtComboBox"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelBuffer">
+       <property name="text">
+        <string>Buffer Distance (m):</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="bufferDistanceSpinBox">
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>50000</number>
+       </property>
+       <property name="value">
+        <number>5000</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelPopulation">
+       <property name="text">
+        <string>Population Threshold:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="populationSpinBox">
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>100000</number>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="labelAnalysisType">
+       <property name="text">
+        <string>Analysis Type:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="analysisTypeComboBox">
+       <item>
+        <property name="text">
+         <string>Road-Based Accessibility</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Isochrone Mapping</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Population Coverage</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="runButton">
+       <property name="text">
+        <string>Run Analysis</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exportButton">
+       <property name="text">
+        <string>Export Results</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeButton">
+       <property name="text">
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTextBrowser" name="resultTextBox">
+     <property name="placeholderText">
+      <string>Results will appear here...</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

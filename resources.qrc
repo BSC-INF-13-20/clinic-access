@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/access_clinic" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
